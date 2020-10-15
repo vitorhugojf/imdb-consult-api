@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Project.API</name>
+    </assembly>
+    <members>
+        <member name="T:Project.API.Configurations.ExceptionHandlerExtensions">
+            <summary>
+            Handler global para capturar exceptions não mapeadas no código.
+            </summary>
+        </member>
+        <member name="T:Project.API.Configurations.PoliciesConfiguration">
+            <summary>
+            Definições de Policies do sistema.
+            </summary>
+        </member>
+        <member name="T:Project.API.Configurations.SerilogConfiguration">
+            <summary>
+            Configuração do Serilog.
+            </summary>
+        </member>
+        <member name="T:Project.API.Controllers.AccountController">
+            <summary>
+            Controlador dos métodos relacionados a conta
+            </summary>
+        </member>
+        <member name="M:Project.API.Controllers.AccountController.#ctor(Microsoft.Extensions.Logging.ILogger{Project.API.Controllers.AccountController},Project.Application.Interfaces.IAccountService,Microsoft.AspNetCore.Identity.SignInManager{Project.Domain.UserAgg.User})">
+            <summary>
+            Construtor do Controlador
+            </summary>
+        </member>
+        <member name="M:Project.API.Controllers.AccountController.Login(Project.Application.ViewModels.User.UserLoginVm)">
+            <summary>
+            Login no sistema. 
+            </summary>
+            <param name="userLoginVm">View com o login e senha do usuário.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Project.API.Controllers.MovieController">
+            <summary>
+            Controlador dos métodos relacionados a usuário
+            </summary>
+        </member>
+        <member name="M:Project.API.Controllers.MovieController.#ctor(Microsoft.Extensions.Logging.ILogger{Project.API.Controllers.MovieController},Project.Application.Interfaces.IUserService,Project.Application.Interfaces.IMovieService,Project.Application.Interfaces.IVoteService)">
+            <summary>
+            Construtor do Controlador
+            </summary>
+        </member>
+        <member name="M:Project.API.Controllers.MovieController.Register(Project.Domain.DTO.Movie.MovieForRegisterDto)">
+            <summary>
+            Registra um novo filme no sistema. 
+            </summary>
+            <param name="movieRegisterDto">View com os dados do novo filme.</param>
+        </member>
+        <member name="M:Project.API.Controllers.MovieController.Vote(System.Int32,System.Int32)">
+            <summary>
+            Registra o voto de um usuário sobre um filme no sistema. 
+            </summary>
+            <param name="value">Nota do usuário</param>
+            <param name="id">Identificador do filme</param>
+        </member>
+        <member name="M:Project.API.Controllers.MovieController.AllMovies(Project.Domain.DTO.Movie.MovieFilterDto,System.Int32,System.Int32)">
+            <summary>
+            Retorna todos os filmes do sistema. 
+            </summary>
+        </member>
+        <member name="M:Project.API.Controllers.MovieController.MovieById(System.Int32)">
+            <summary>
+            Retorna o filme com o id especificado. 
+            </summary>
+            <param name="id">Id do filme a ser buscado.</param>
+        </member>
+        <member name="T:Project.API.Controllers.UserController">
+            <summary>
+            Controlador dos métodos relacionados a usuário
+            </summary>
+        </member>
+        <member name="M:Project.API.Controllers.UserController.#ctor(Microsoft.Extensions.Logging.ILogger{Project.API.Controllers.UserController},Project.Application.Interfaces.IUserService)">
+            <summary>
+            Construtor do Controlador
+            </summary>
+        </member>
+        <member name="M:Project.API.Controllers.UserController.Register(Project.Domain.DTO.User.UserForRegisterDto)">
+            <summary>
+            Registra um novo usuário no sistema. 
+            </summary>
+            <param name="userRegisterDto">View com os dados do novo usuário.</param>
+        </member>
+        <member name="M:Project.API.Controllers.UserController.AllUsers(System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Retorna todos os usuários do sistema. 
+            </summary>
+        </member>
+        <member name="M:Project.API.Controllers.UserController.UserById(System.Int32)">
+            <summary>
+            Retorna o usuário com o id especificado. 
+            </summary>
+            <param name="id">Id do usuário a ser buscado.</param>
+        </member>
+        <member name="M:Project.API.Controllers.UserController.Update(Project.Domain.DTO.User.UserForUpdateDto)">
+            <summary>
+            Atualiza um usuário no sistema.
+            </summary>
+            <param name="userForUpdateDto">View com os dados do usuário a ser atualizado.</param>
+        </member>
+        <member name="M:Project.API.Controllers.UserController.Disable(System.Int32)">
+            <summary>
+            Desabilita o usuário no sistema.
+            </summary>
+            <param name="id">Identificador do usuário a ser desabilitado.</param>
+        </member>
+        <member name="T:Project.API.Resources.Messages">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Project.API.Resources.Messages.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Project.API.Resources.Messages.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Project.API.Resources.Messages.UserInvalidLockedLogin">
+            <summary>
+              Looks up a localized string similar to Usuário bloqueado devido a várias tentativas de login inválido, tente novamente mais tarde ou entre em contato com o SAC para saber mais..
+            </summary>
+        </member>
+        <member name="P:Project.API.Resources.Messages.UserInvalidToLogin">
+            <summary>
+              Looks up a localized string similar to Não foi possível logar com o login {0} e senha {1} no sistema..
+            </summary>
+        </member>
+        <member name="P:Project.API.Resources.Messages.UserInvalidToUpdate">
+            <summary>
+              Looks up a localized string similar to Não foi possível editar o usuário com Id {0} no sistema..
+            </summary>
+        </member>
+        <member name="M:SeedData.Seed.SeedUsers">
+            <summary>
+            Faz a criação inicial dos usuários do sistema.
+            </summary>
+        </member>
+    </members>
+</doc>

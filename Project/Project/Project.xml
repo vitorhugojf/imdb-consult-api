@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Project.API</name>
+    </assembly>
+    <members>
+        <member name="T:Project.API.Controllers.WeatherForecastController">
+            <summary>
+             Controlador dos métodos relacionados ao clima
+            </summary>
+        </member>
+        <member name="M:Project.API.Controllers.WeatherForecastController.#ctor(Microsoft.Extensions.Logging.ILogger{Project.API.Controllers.WeatherForecastController})">
+            <summary>
+            Construtor do Controller
+            </summary>
+            <param name="logger"></param>
+        </member>
+        <member name="M:Project.API.Controllers.WeatherForecastController.Get">
+            <summary>
+            Descrição
+            </summary>
+        </member>
+    </members>
+</doc>
